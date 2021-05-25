@@ -95,7 +95,7 @@ th {
         @foreach($berobat as $berobat)
         <tr>
         <td>{{$loop->iteration}}</td>
-        <td>{{$berobat->pasien->nama}}</td>
+        <td>@if($berobat->pasien){{$berobat->pasien['nama']}}@endif</td>
         <td>{{$berobat->keluhan}}</td>
         <td>{{$berobat->dokter->nama}}</td>
         <td>2{{$berobat->created_at->isoFormat('D MMMM YYYY')}}</td>
