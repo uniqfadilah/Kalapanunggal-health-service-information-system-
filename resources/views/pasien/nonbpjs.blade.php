@@ -4,7 +4,7 @@
 <link href="{{url('assets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 @section('isi')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Pasien NON-BPJS</h1>
+            <h1 class="h3 mb-0 text-gray-800">Pasien Umum</h1>
 </div>
 <div class="card shadow mb-4">
             <div class="card-header py-3">

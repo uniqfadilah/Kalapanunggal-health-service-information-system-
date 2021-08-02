@@ -22,7 +22,7 @@
                     <tr>
                       <th>No.</th>
                       <th>Nama</th>
-                      <th>Spesialis</th>
+                      <th>Poli</th>
                       <th>Kontak</th>
                       <th>Aksi</th>
                     </tr>

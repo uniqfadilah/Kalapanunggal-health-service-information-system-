@@ -61,7 +61,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="/pasien-bpjs">BPJS</a>
-            <a class="collapse-item" href="/pasien-non-bpjs">NON-BPJS</a>
+            <a class="collapse-item" href="/pasien-non-bpjs">Umum</a>
           </div>
         </div>
       </li>
@@ -74,7 +74,7 @@
       <li class="nav-item active">
         <a class="nav-link" href='/kasir'>
           <i class="fas fa-cash-register"></i>
-          <span>Kasir</span></a>
+          <span>Pembayaran</span></a>
       </li>
 
 @else
