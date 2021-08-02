@@ -53,7 +53,7 @@ position: relative;
 </head>
 <body>
 <div class="container">
-  <img src="{{url('assets/img/kartu.png')}}" alt="Nature" style="width:48%;">
+  <img src="{{url('assets/img/kartunew.png')}}" alt="Nature" style="width:48%;">
   <div class="nomor">{{$pasien->nomorkartu}}</div>
   <div class="nama">{{$pasien->nama}}</div>
   <div class="alamat">{{$pasien->alamat}}</div>

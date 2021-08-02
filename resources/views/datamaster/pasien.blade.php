@@ -29,7 +29,7 @@
                       <td>{{$pasien->nama}}</td>
                       <td>{{$pasien->alamat}}</td>
                       <td>{{$pasien->hp}}</td>
-                      <td>{{$pasien->keterangan}}</td>
+                      <td>@if($pasien->keterangan == "nonbpjs") UMUM @else BPJS @endif </td>
                       <form action="/pasien/{{$pasien->id}}" method="post">
                       @method('delete')
                       @csrf

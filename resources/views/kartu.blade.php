@@ -93,7 +93,7 @@ th {
 </head>
 <body>
 <div class="container">
-  <img src="{{url('assets/img/invoice.png')}}" alt="Nature" style="width:47%;">
+  <img src="{{url('assets/img/invoicenew.png')}}" alt="Nature" style="width:47%;">
 <div class="fortable1">
 <div class="pendaftaran">Detail Biaya :</div>
 @foreach($biaya as $biaya)

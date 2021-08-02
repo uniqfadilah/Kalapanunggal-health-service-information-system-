@@ -81,7 +81,7 @@ th {
 </head>
 <body>
 <div class="container">
-  <img src="{{url('assets/img/invoice.png')}}" alt="Nature" style="width:100%;">
+  <img src="{{url('assets/img/invoicenew.png')}}" alt="Nature" style="width:100%;">
 
   <div class="fortable">
         <table>
