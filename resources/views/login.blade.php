@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-dark"
 
   <div class="container">
 
@@ -37,7 +37,7 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang Diaplikasi Puskesmas KALAPANUNGGAL!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">SELAMAT DATANG DI APLIKASI PUSKESMAS!</h1>
                     <br>
                   </div>
                   <form action="/postlogin" method="post">
@@ -49,7 +49,7 @@
                       <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukan Password">
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-dark btn-user btn-block">
                       Login
                 </button>
                     <hr>

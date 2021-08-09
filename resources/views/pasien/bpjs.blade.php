@@ -87,7 +87,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="headmodal">Keluhan Pasien</h5>
+          <h5 class="modal-title" id="headmodal">Berobat Pasien</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -95,7 +95,7 @@
         <div class="modal-body">
         <form action="" method="post" id="link">
         @csrf
-        <label for="keluhan">Keluhan</label>
+        <label for="keluhan">Anamnesis</label>
         <textarea type="text" name='keluhan' class="form-control form-control-user" id="keluhan"></textarea>
         <br>
         <select class="custom-select" name="dokter" id='dokter'>

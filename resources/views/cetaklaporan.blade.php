@@ -88,7 +88,7 @@ th {
         <tr>
         <th>No</th>
         <th>Nama Pasien</th>
-        <th>Keluhan</th>
+        <th>Anamnesis</th>
         <th>Dokter</th>
         <th>Penanganan</th>
         </tr>
