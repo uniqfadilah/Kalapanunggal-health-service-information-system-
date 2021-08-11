@@ -79,6 +79,7 @@
           <option value="apotek">Apotek</option>
           <option value="kasir">Kasir</option>
           <option value="admin">Admin</option>
+          <option value="dokter">Dokter</option>
         </select>
         <br>
         <br>
