@@ -32,6 +32,9 @@ class AuthController extends Controller
                 elseif(Auth()->user()->role=="apotek"){
                     return redirect('/berobat');
                 }
+                elseif(Auth()->user()->role=="dokter"){
+                    return redirect('/lamandokter');
+                }
                 else{
                     return redirect('/dashboard');
                 }

@@ -92,7 +92,7 @@
         <div class="modal-body">
         <form action="" method="post" id="link">
         @csrf
-        <label for="keluhan">Keluhan</label>
+        <label for="keluhan">Anamnesis</label>
         <textarea type="text" name='keluhan' class="form-control form-control-user" id="keluhan"></textarea>
         <br>
         <select class="custom-select" name="dokter" id='dokter'>

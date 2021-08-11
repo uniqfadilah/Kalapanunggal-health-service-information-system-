@@ -15,8 +15,8 @@ class BerobatController extends Controller
 
     public function ambilobat()
     {
+        $pasien=berobat::where('status','apotek')->get();
         $obat=obat::all();
-        $pasien=pasien::where('status','berobat')->get();
         return view("obat",compact('pasien','obat'));
     }
     public function kasir()
@@ -33,6 +33,25 @@ class BerobatController extends Controller
         return back()->withSuccess('Pembayaran Selesai!');
     }
 
+    public function apotikselesai($id){
+        $data= berobat::where('id',$id)->first();
+        $data->update([
+            'status'=>'selesai'
+        ]);
+        if($data->pasien->keterangan=='nonbpjs'){
+            pasien::where('id',$data->pasien->id)->update([
+                'status'=>'pembayaran',
+            ]);
+        }
+        else{
+            pasien::where('id',$data->pasien->id)->update([
+                'status'=>'aktif',
+            ]);
+        }
+        return back()->withSuccess('Pasien Dalam Antrian!');
+
+    }
+
     public function berobat(pasien $pasien, Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -40,13 +59,13 @@ class BerobatController extends Controller
             'dokter'=>'required',
             ]);
             if ($validator->fails()) {
-            
                 return back()->with('toast_error', 'Terdapat Kesalahan Input');
             }
             $berobat=berobat::create([
                 "pasien_id"=>$pasien->id,
                 "dokter_id"=>$request->dokter,
                 'keluhan'=>$request->keluhan,
+                "status"=>'periksa'
          
             ]);
             $pemeriksaan=biaya::where('nama','Pemeriksaan')->first();
@@ -73,7 +92,7 @@ class BerobatController extends Controller
             ]);
         }
         pasien::where('id',$pasien->id)->update([
-            'status'=>'berobat',
+            'status'=>'pemeriksaan',
         ]);
         return back()->withSuccess('Pasien Dalam Antrian!');
     }

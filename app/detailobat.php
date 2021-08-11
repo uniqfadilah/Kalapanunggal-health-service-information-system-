@@ -8,6 +8,6 @@ class detailobat extends Model
 {
     protected $guarded=['id'];
     public function oba(){
-        return $this->hasMany('App\obat');
+        return $this->hasOne('App\obat','id',"obat_id");
      }
 }

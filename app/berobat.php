@@ -16,9 +16,9 @@ class berobat extends Model
         return $this->belongsTo('App\pasien');
      }
     public function dokter(){
-        return $this->belongsTo('App\dokter');
+        return $this->hasOne('App\dokter','id','dokter_id');
      }
     public function obat(){
-        return $this->hasMany('App\detailobat');
+        return $this->hasMany('App\detailobat')->with('oba');
      }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use App\obat;
+use App\berobat;
 use Illuminate\Http\Request;
 
 class ObatController extends Controller
@@ -108,6 +109,11 @@ class ObatController extends Controller
         $c=obat::where('id',$request->id)->first();
         return response()->json($c);
     }
+
+    public function ambilobat($id){
+        $c=berobat::where('id',$id)->with('obat')->first();
+        return response()->json($c);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -118,5 +124,29 @@ class ObatController extends Controller
     {
         obat::destroy($obat->id);
         return back()->withSuccess('Data Dihapus!');
+    }
+
+    public function kelolastok(){
+        $obat=obat::all();
+        return view("kelolastok",compact('obat'));
+
+    }
+    public function kelolastoktambah(Request $request,$id){
+        $validator = Validator::make($request->all(), [
+            'tambah'=>'required',
+            ]);
+        
+            if ($validator->fails()) {
+                return back()->with('toast_error', 'Terdapat Kesalahan Input');
+            }
+
+            $obat=obat::where('id',$id)->first();
+            $stok = $obat->stok + $request->tambah;
+            $obat->update([
+                'stok' => $stok
+            ]);
+            return back()->withSuccess('Stok Obat Ditambah!');
+    
+
     }
 }

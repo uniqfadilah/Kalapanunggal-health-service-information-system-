@@ -67,9 +67,14 @@ Route::group(['middleware'=>['auth','checkRole:resepsionis']],function(){
 Route::group(['middleware'=>['auth','checkRole:apotek']],function(){
 
     Route::get('/berobat','berobatController@ambilobat');
+    Route::get('/kelolastok','obatController@kelolastok');
+    Route::PUT('/kelolastok/{id}','obatController@kelolastoktambah');
+    Route::get('/ambilobatapi/{id}','obatController@ambilobat');
     Route::post('/detailobat/{pasien}','berobatController@detailobat');
+    Route::post('/apotikselesai/{id}','berobatController@apotikselesai');
 });
-Route::group(['middleware'=>['auth','checkRole:kasir']],function(){
-       
-});
+Route::group(['middleware'=>['auth','checkRole:dokter']],function(){
+       Route::get('lamandokter','LamanDokterController@index');
+       Route::post('lamandokter/{id}','LamanDokterController@create');
+}); 
 

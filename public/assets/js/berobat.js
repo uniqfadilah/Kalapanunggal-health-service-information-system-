@@ -4,6 +4,12 @@ $('.berobat').on('click', function () {
     $("#link").attr('action', '/berobat/' + id);
     console.log(id);
 });
+$('.diagnosis').on('click', function () {
+    $('#modaldiagnosis').modal('show');
+    let id = $(this).data('id');
+    $("#link").attr('action', '/lamandokter/' + id);
+    console.log(id);
+});
 $('.obat').on('click', function () {
     $('#modalberobat').modal('show');
     let id = $(this).data('id');

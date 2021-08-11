@@ -88,7 +88,7 @@ th {
         <tr>
         <th>No</th>
         <th>Nama Pasien</th>
-        <th>Anamnesis</th>
+        <th>Diagnosis</th>
         <th>Dokter</th>
         <th>Penanganan</th>
         </tr>
@@ -96,9 +96,9 @@ th {
         <tr>
         <td>{{$loop->iteration}}</td>
         <td>@if($berobat->pasien){{$berobat->pasien['nama']}}@endif</td>
-        <td>{{$berobat->keluhan}}</td>
-        <td>{{$berobat->dokter->nama}}</td>
-        <td>2{{$berobat->created_at->isoFormat('D MMMM YYYY')}}</td>
+        <td>{{$berobat['diagnosis']}}</td>
+        <td>{{$berobat->dokter?$berobat->dokter->nama:'--'}}</td>
+        <td>{{$berobat->created_at->isoFormat('D MMMM YYYY')}}</td>
         </tr>
         @endforeach
 

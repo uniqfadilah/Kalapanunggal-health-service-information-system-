@@ -46,6 +46,11 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Ambil Obat</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href='/kelolastok'>
+          <i class="fas fa-fw fa-home"></i>
+          <span>Kelola stok</span></a>
+      </li>
       @elseif(auth()->user()->role=='kasir')
       <li class="nav-item active">
         <a class="nav-link" href='/kasir'>
@@ -77,7 +82,7 @@
           <span>Pembayaran</span></a>
       </li>
 
-@else
+@elseif(auth()->user()->role=='admin')
      <!-- Nav Item - Dashboard -->
      <li class="nav-item active">
         <a class="nav-link" href="/dashboard">
@@ -115,6 +120,17 @@
         <a class="nav-link" href="/laporan">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Laporan Berobat</span></a>
+      </li>
+      @else
+      <li class="nav-item active">
+        <a class="nav-link" href="/dashboard">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/lamandokter">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Pemeriksaan</span></a>
       </li>
       @endif
 
